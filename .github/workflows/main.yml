@@ -25,3 +25,10 @@ jobs:
         compose-file: "./docker-compose.yml"
         up-flags: "--scale chrome=5"
 
+    - name : install dependencies
+      run: pip install  robotframework-pabot robotframework robotframework-seleniumlibrary
+
+    - name : run tests
+      run: pabot --testlevelsplit .\test.robot
+    
+
