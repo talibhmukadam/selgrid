@@ -23,7 +23,7 @@ jobs:
     - uses: hoverkraft-tech/compose-action@v1.5.1
       with:
         compose-file: "./docker-compose.yml"
-        up-flags: "--scale chrome=40"
+        up-flags: "--scale chrome=20"
 
     - name : install dependencies
       run: pip install  robotframework-pabot robotframework robotframework-seleniumlibrary
